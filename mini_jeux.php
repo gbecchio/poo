@@ -1,17 +1,14 @@
 <?php
-error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
-
-include_once __DIR__.'/../vendor/autoload.php';
+include_once __DIR__.'/vendor/autoload.php';
 
 use \Greg\Personnage;
 use \Greg\PersonnageManager;
 
-$db = new PDO('mysql:host=localhost;dbname=poo', 'root', 'greg');
+$db = new PDO('mysql:host=localhost;dbname=combats', 'root', '');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // On émet une alerte à chaque fois qu'une requête a échoué.
 
-$manager = new PersonnageManager($db);
-
+$manager = new PersonnagesManager($db);
+var_dump($manager);
 if (isset($_POST['creer']) && isset($_POST['nom'])) // Si on a voulu créer un personnage.
 {
   $perso = new Personnage(['nom' => $_POST['nom']]); // On crée un nouveau personnage.
@@ -55,44 +52,7 @@ elseif (isset($_POST['utiliser']) && isset($_POST['nom'])) // Si on a voulu util
     <p>Nombre de personnages créés : <?= $manager->count() ?></p>
 <?php
 if (isset($message)) // On a un message à afficher ?
-{
   echo '<p>', $message, '</p>'; // Si oui, on l'affiche.
-}
-
-if (isset($perso)) // Si on utilise un personnage (nouveau ou pas).
-{
-?>
-    <fieldset>
-      <legend>Mes informations</legend>
-      <p>
-        Nom : <?= htmlspecialchars($perso->nom()) ?><br />
-        Dégâts : <?= $perso->degats() ?>
-      </p>
-    </fieldset>
-    
-    <fieldset>
-      <legend>Qui frapper ?</legend>
-      <p>
-<?php
-$persos = $manager->getList($perso->nom());
-
-if (empty($persos))
-{
-  echo 'Personne à frapper !';
-}
-
-else
-{
-  foreach ($persos as $unPerso)
-    echo '<a href="?frapper=', $unPerso->id(), '">', htmlspecialchars($unPerso->nom()), '</a> (dégâts : ', $unPerso->degats(), ')<br />';
-}
-?>
-      </p>
-    </fieldset>
-<?php
-}
-else
-{
 ?>
     <form action="" method="post">
       <p>
@@ -101,8 +61,5 @@ else
         <input type="submit" value="Utiliser ce personnage" name="utiliser" />
       </p>
     </form>
-<?php
-}
-?>
   </body>
 </html>

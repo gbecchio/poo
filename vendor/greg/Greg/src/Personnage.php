@@ -93,4 +93,8 @@ class Personnage
             $this->nom = $nom;
         }
     }
+    public function nomValide()
+    {
+        return !empty($this->_nom);
+    }
 }
