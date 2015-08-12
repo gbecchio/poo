@@ -1,0 +1,1 @@
+[Wed Aug 12 15:19:51.890824 2015] [authz_core:error] [pid 11901] [client 127.0.0.1:52312] AH01630: client denied by server configuration: /home/greg/poo/www/mini_jeux.php
