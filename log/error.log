@@ -35,3 +35,4 @@
 [Fri Aug 14 11:43:00.796142 2015] [:error] [pid 3894] [client 127.0.0.1:55656] PHP Fatal error:  Class 'Greg\\Magicien' not found in /home/greg/poo/www/mini_jeux.php on line 151
 [Fri Aug 14 11:43:04.545972 2015] [:error] [pid 3893] [client 127.0.0.1:55657] PHP Fatal error:  Class 'Greg\\Magicien' not found in /home/greg/poo/www/mini_jeux.php on line 151
 [Fri Aug 14 11:43:59.274856 2015] [:error] [pid 3892] [client 127.0.0.1:55664] PHP Fatal error:  Class 'Greg\\Magicien' not found in /home/greg/poo/www/mini_jeux.php on line 143
+[Fri Aug 14 11:54:17.638629 2015] [:error] [pid 4616] [client 127.0.0.1:55807] PHP Notice:  Use of undefined constant name - assumed 'name' in /home/greg/poo/www/mini_jeux.php on line 143
