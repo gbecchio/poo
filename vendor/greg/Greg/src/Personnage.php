@@ -47,7 +47,8 @@ class Personnage
         }
         else
         {
-            return $this->degats();
+            $this->degats();
+            return self::PERSONNAGE_FRAPPE;
         }
         // Sinon, elle renverra une valeur signifiant que le personnage a bien été frappé.
     }
@@ -95,6 +96,6 @@ class Personnage
     }
     public function nomValide()
     {
-        return !empty($this->_nom);
+        return !empty($this->nom);
     }
 }
