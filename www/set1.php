@@ -1,11 +1,12 @@
 <?php
-error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
+error_reporting(-1);
+ini_set('error_reporting', -1);
 
 class testSet
 {
     private $tabVar = [];
-    private $t='a';
+    private $t='';
+    public $w;
     function __set($nom, $valeur)
     {
         $this->tabVar[$nom] = $valeur;
@@ -18,7 +19,6 @@ class testSet
     }
     function __isset($nom)
     {
-        var_dump($nom);
         if(isset($this->$nom))
         {
             echo "oui il est isseté {$nom} avec la valeur {$this->$nom}";
@@ -34,19 +34,29 @@ class testSet
     {
         echo "{$nom}";
     }
+    function __call($methode, $args)
+    {
+        echo "<pre>";
+        var_dump($methode);
+        var_dump($args);
+        echo "</ pre>";
+    }
 }
 $ts = new testSet();
 $ts->a = 10;
 $ts->kouraphantei = "ceci est";
+var_dump($ts->a);
 // echo $t->kouraphantei;
 // var_dump($t->x);
 // print_r($t);
 echo "<pre>";
 // var_dump($ts->tabVar);
-var_dump(isset($ts->a));
-var_dump(isset($ts->kouraphantei));
-var_dump(isset($ts->x));
-unset($ts->x);
-unset($ts->a);
-unset($ts->f);
+// var_dump(isset($ts->a));
+// var_dump(isset($ts->kouraphantei));
+// var_dump(isset($ts->x));
+// unset($ts->x);
+// unset($ts->a);
+// unset($ts->w);
+// unset($ts->t);
+$ts->mafamille('ambroise', ['a'=>1, "b"=>"run"]);
 echo "</ pre>";
