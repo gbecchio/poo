@@ -41,6 +41,10 @@ class testSet
         var_dump($args);
         echo "</ pre>";
     }
+    private function oui($greg, $moi)
+    {
+        echo $greg."=>".$moi;
+    }
 }
 $ts = new testSet();
 $ts->a = 10;
@@ -59,4 +63,5 @@ echo "<pre>";
 // unset($ts->w);
 // unset($ts->t);
 $ts->mafamille('ambroise', ['a'=>1, "b"=>"run"]);
+$ts->oui('greg', 'moi');
 echo "</ pre>";
