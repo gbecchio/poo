@@ -41,9 +41,19 @@ class testSet
         var_dump($args);
         echo "</ pre>";
     }
+    function __callStatic($methode, $args)
+    {
+        var_dump($methode);
+        var_dump($args);
+    }
     private function oui($greg, $moi)
     {
         echo $greg."=>".$moi;
+    }
+
+    private static function toi($a, $b, $c)
+    {
+        echo $a, $b, $c;
     }
 }
 $ts = new testSet();
@@ -64,4 +74,5 @@ echo "<pre>";
 // unset($ts->t);
 $ts->mafamille('ambroise', ['a'=>1, "b"=>"run"]);
 $ts->oui('greg', 'moi');
+testSet::toi('a', 'b', 'c');
 echo "</ pre>";
