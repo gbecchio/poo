@@ -1,5 +1,6 @@
 <?php
-class MaClasseIT implements Iterator, SeekableIterator
+// class MaClasseIT implements Iterator, SeekableIterator, ArrayAccess, Countable
+class MaClasseIT extends ArrayIterator
 {
     private $position = 0;
     private $tableau = ['Premier élément', 'Deuxième élément', 'Troisième élément', 'Quatrième élément', 'Cinquième élément'];
@@ -60,6 +61,40 @@ class MaClasseIT implements Iterator, SeekableIterator
         }
         return false;
     }
+    /**
+    * Permet d'utiliser l'objet à la maière d'un tableau
+    */
+    public function offsetExists($offset)
+    {
+        if(array_key_exists($offset, $this->tableau))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public function offsetGet($offset)
+    {
+        return $this->tableau[$offset];
+    }
+    public function offsetSet($offset, $value)
+    {
+        $this->tableau[$offset] = $value;
+    }
+    public function offsetUnset($offset)
+    {
+        unset($this->tableau[$offset]);
+        var_dump($this->tableau);
+    }
+    /*
+    * Permet de calculer le nombre d'éléments du tableau
+    */
+    public function count()
+    {
+        return count($this->tableau);
+    }
 }
 
 $objet = new MaClasseIT;
@@ -78,4 +113,12 @@ foreach($it as $key => $value) {
 $it->rewind();
 var_dump($it->seek(2));
 var_dump($it->current());
+var_dump($it->offsetExists(1));
+var_dump($it->offsetExists('grâce'));
+var_dump($it['1']);
+$it['100'] = 'ce n\'est rien';
+var_dump($it['1']);
+unset($it['1']);
+var_dump(empty($it['1']));
+var_dump(count($it));
 echo "</ pre>";
