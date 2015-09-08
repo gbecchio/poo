@@ -123,3 +123,4 @@
 [Tue Aug 25 09:53:37.698397 2015] [:error] [pid 4170] [client 127.0.0.1:47769] PHP Parse error:  syntax error, unexpected 'pubilc' (T_STRING), expecting function (T_FUNCTION) in /home/greg/poo/www/set1.php on line 8, referer: http://127.0.0.2/
 [Tue Aug 25 09:53:43.299033 2015] [:error] [pid 4254] [client 127.0.0.1:47770] PHP Parse error:  syntax error, unexpected 'pubilc' (T_STRING), expecting function (T_FUNCTION) in /home/greg/poo/www/set1.php on line 8
 [Tue Aug 25 09:55:05.900676 2015] [:error] [pid 7875] [client 127.0.0.1:47779] PHP Parse error:  syntax error, unexpected 'error_reporting' (T_STRING) in /home/greg/poo/www/set1.php on line 4
+[Tue Sep 08 10:58:38.271047 2015] [:error] [pid 2922] [client 127.0.0.1:48382] script '/home/greg/poo/www/reflexion_methode.php' not found or unable to stat

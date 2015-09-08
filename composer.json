@@ -1,6 +1,7 @@
 {
     "require": {
-        "monolog/monolog": "1.0.*"
+        "monolog/monolog": "1.0.*",
+        "niktux/addendum": "*"
     },
     "autoload": {
         "classmap": ["vendor/greg/Greg/src/"]
