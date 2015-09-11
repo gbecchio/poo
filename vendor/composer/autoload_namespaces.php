@@ -6,7 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Tests\\Addendum' => array($vendorDir . '/niktux/addendum'),
     'Monolog' => array($vendorDir . '/monolog/monolog/src'),
-    'Addendum' => array($vendorDir . '/niktux/addendum/lib'),
 );
