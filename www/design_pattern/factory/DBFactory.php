@@ -8,7 +8,7 @@ class DBFactory
     {
         $classe = 'SGBDR_' . $sgbdr;
 
-        if (file_exists($chemin = $classe . '.php'))
+        if (file_exists($chemin = __DIR__."/".$classe . '.php'))
         {
             require $chemin;
             return new $classe;

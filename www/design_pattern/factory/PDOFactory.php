@@ -22,7 +22,7 @@ class PDOFactory
     }
 }
 
-try
+/*try
 {
     $db = PDOFactory::getMysqlConnexion();
     $db2 = PDOFactory::getPgsqlConnexion();
@@ -30,10 +30,10 @@ try
 catch(Exception $e)
 {
     var_dump($e);
-}
+}*/
 
-echo "<pre>";
+/*echo "<pre>";
 var_dump($db);
 echo "<br />";
 // var_dump($db2);
-echo "</ pre>";
+echo "</ pre>";*/
