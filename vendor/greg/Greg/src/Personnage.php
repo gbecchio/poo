@@ -1,6 +1,11 @@
 <?php
 namespace Greg;
-
+/**
+ * @Table("personnages")
+ */
+/**
+ * @Type({'brute', 'guerrier', 'magicien'})
+ */
 class Personnage
 {
     private $id;

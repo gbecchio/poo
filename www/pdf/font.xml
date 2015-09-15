@@ -1,0 +1,9 @@
+<!-- xml config file code -->
+<fonts>   
+    <font name="DejaVuSans">
+        <normal src="%resources%/fonts/DejaVuSans/normal.ttf" /><!-- "%resources%" will be replaced by path to PHPPdf/Resources directory -->
+        <bold src="%resources%/fonts/DejaVuSans/bold.ttf" />
+        <italic src="%resources%/fonts/DejaVuSans/oblique.ttf" />
+        <bold-italic src="%resources%/fonts/DejaVuSans/bold+oblique.ttf" />
+    </font>
+</fonts>

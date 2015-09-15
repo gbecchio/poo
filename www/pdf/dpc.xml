@@ -1,0 +1,4 @@
+<!-- xml config file code -->
+<page page-size="100:50">text</page>
+<page page-size="a4">text</page>
+<page page-size="letter-landscape">text</page>
