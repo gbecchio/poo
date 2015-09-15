@@ -4,26 +4,30 @@ ini_set('error_reporting', -1);
 
 class MonSingleton
 {
+    private static $ceci;
+    
     protected function __construct()
     {
-        return $this;
     }
 
     public static function init()
     {
-        if (isset($this))
+        if (isset(self::$ceci))
         {
-            return $this;
+            return self::$ceci;
         }
         else
         {
-            return $this->__construct();
+            self::$ceci = new self;
+            return self::$ceci;
         }
     }
     function __clone()
     {
-        return false;
     }
 }
 $monsingleton = MonSingleton::init();
 var_dump($monsingleton);
+$monsingleton2 = MonSingleton::init();
+var_dump($monsingleton2);
+var_dump($monsingleton2 === $monsingleton);
