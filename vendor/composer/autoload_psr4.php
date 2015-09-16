@@ -6,4 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Sstalle\\php7cc\\' => array($vendorDir . '/sstalle/php7cc/src'),
 );

@@ -3,7 +3,8 @@
         "monolog/monolog": "1.0.*"
     },
     "require-dev": {
-        "tecnick.com/tcpdf": "6.2.11"
+        "tecnick.com/tcpdf": "6.2.11",
+        "sstalle/php7cc": "^1.0"
     },
     "autoload": {
         "classmap": ["vendor/greg/Greg/src/"]

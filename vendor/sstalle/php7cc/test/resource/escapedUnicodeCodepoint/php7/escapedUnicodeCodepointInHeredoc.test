@@ -1,0 +1,25 @@
+Escaped unicode codepoints in heredoc
+PHP >=7.0
+-----
+<?php
+$str = <<<EOD
+    \u{xyz}
+EOD;
+
+-----
+Invalid UTF-8 codepoint escape sequence
+-----
+<?php
+$str = <<<EOD
+    \\u{xyz}
+EOD;
+
+-----
+
+-----
+<?php
+$str = <<<EOD
+    \u202e
+EOD;
+
+-----
