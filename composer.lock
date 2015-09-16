@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "1c2a3ab914895bd322dd6894a86ac60f",
+    "content-hash": "98cd2408405100dde28b0cc08bc10210",
     "packages": [
         {
             "name": "monolog/monolog",
