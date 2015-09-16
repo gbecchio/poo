@@ -2809,3 +2809,7 @@
 127.0.0.1 - - [16/Sep/2015:15:34:30 +0200] "GET /closures/add1.php HTTP/1.1" 200 416 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
 127.0.0.1 - - [16/Sep/2015:15:34:30 +0200] "GET /closures/add1.php HTTP/1.1" 200 417 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
 127.0.0.1 - - [16/Sep/2015:15:34:30 +0200] "GET /closures/add1.php HTTP/1.1" 200 417 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
+127.0.0.1 - - [16/Sep/2015:17:19:03 +0200] "GET /closures/add2.php HTTP/1.1" 200 204 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
+127.0.0.1 - - [16/Sep/2015:17:19:05 +0200] "GET /closures/add2.php HTTP/1.1" 200 204 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
+127.0.0.1 - - [16/Sep/2015:17:19:05 +0200] "GET /closures/add2.php HTTP/1.1" 200 204 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
+127.0.0.1 - - [16/Sep/2015:17:19:05 +0200] "GET /closures/add2.php HTTP/1.1" 200 204 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0"
