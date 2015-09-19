@@ -1,7 +1,7 @@
 <?php
-namespace Greg\lib\OCFram;
+namespace OCFram;
 
-class HTTPResponse
+class HTTPResponse extends ApplicationComponent
 {
   protected $page;
 

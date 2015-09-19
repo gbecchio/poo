@@ -1,5 +1,5 @@
 <?php
-namespace Greg\lib\OCFram;
+namespace OCFram;
 
 class Page extends ApplicationComponent
 {
@@ -22,6 +22,8 @@ class Page extends ApplicationComponent
     {
       throw new \RuntimeException('La vue spécifiée n\'existe pas');
     }
+
+    $user = $this->app->user();
 
     extract($this->vars);
 

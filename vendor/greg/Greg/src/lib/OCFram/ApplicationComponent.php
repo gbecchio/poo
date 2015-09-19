@@ -1,5 +1,5 @@
 <?php
-namespace Greg\lib\OCFram;
+namespace OCFram;
 
 abstract class ApplicationComponent
 {

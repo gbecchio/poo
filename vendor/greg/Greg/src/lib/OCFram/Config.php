@@ -1,5 +1,5 @@
 <?php
-namespace Greg\lib\OCFram;
+namespace OCFram;
 
 class Config extends ApplicationComponent
 {

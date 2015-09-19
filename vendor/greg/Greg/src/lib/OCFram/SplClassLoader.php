@@ -1,5 +1,5 @@
 <?php
-namespace Greg\lib\OCFram;
+namespace OCFram;
 
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
