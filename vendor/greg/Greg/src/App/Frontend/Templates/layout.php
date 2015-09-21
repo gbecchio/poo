@@ -1,8 +1,3 @@
-<?php
-namespace App\Frontend\Templates;
-
-use OCFram\Application;
-
 <!DOCTYPE html>
 <html>
   <head>
