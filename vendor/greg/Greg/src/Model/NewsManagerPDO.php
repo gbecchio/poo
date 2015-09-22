@@ -45,9 +45,9 @@ class NewsManagerPDO extends NewsManager
     $requete = $this->dao->prepare('SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news WHERE id = :id');
     $requete->bindValue(':id', (int) $id, \PDO::PARAM_INT);
     $requete->execute();
-    
     $requete->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\News');
     
+    var_dump($requete->fetch()); 
     if ($news = $requete->fetch())
     {
       $news->setDateAjout(new \DateTime($news->dateAjout()));
