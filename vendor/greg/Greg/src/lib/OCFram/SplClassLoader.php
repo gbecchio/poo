@@ -1,6 +1,4 @@
 <?php
-namespace OCFram;
-
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -43,7 +41,7 @@ class SplClassLoader
   private $_namespace;
   private $_includePath;
   private $_namespaceSeparator = '\\';
-
+ 
   /**
    * Creates a new <tt>SplClassLoader</tt> that loads classes of the
    * specified namespace.
@@ -55,7 +53,7 @@ class SplClassLoader
     $this->_namespace = $ns;
     $this->_includePath = $includePath;
   }
-
+ 
   /**
    * Sets the namespace separator used by classes in the namespace of this class loader.
    * 
@@ -65,7 +63,7 @@ class SplClassLoader
   {
     $this->_namespaceSeparator = $sep;
   }
-
+ 
   /**
    * Gets the namespace seperator used by classes in the namespace of this class loader.
    *
@@ -75,7 +73,7 @@ class SplClassLoader
   {
     return $this->_namespaceSeparator;
   }
-
+ 
   /**
    * Sets the base include path for all class files in the namespace of this class loader.
    * 
@@ -85,7 +83,7 @@ class SplClassLoader
   {
     $this->_includePath = $includePath;
   }
-
+ 
   /**
    * Gets the base include path for all class files in the namespace of this class loader.
    *
@@ -95,7 +93,7 @@ class SplClassLoader
   {
     return $this->_includePath;
   }
-
+ 
   /**
    * Sets the file extension of class files in the namespace of this class loader.
    * 
@@ -105,7 +103,7 @@ class SplClassLoader
   {
     $this->_fileExtension = $fileExtension;
   }
-
+ 
   /**
    * Gets the file extension of class files in the namespace of this class loader.
    *
@@ -115,7 +113,7 @@ class SplClassLoader
   {
     return $this->_fileExtension;
   }
-
+ 
   /**
    * Installs this class loader on the SPL autoload stack.
    */
@@ -123,7 +121,7 @@ class SplClassLoader
   {
     spl_autoload_register(array($this, 'loadClass'));
   }
-
+ 
   /**
    * Uninstalls this class loader from the SPL autoloader stack.
    */
@@ -131,7 +129,7 @@ class SplClassLoader
   {
     spl_autoload_unregister(array($this, 'loadClass'));
   }
-
+ 
   /**
    * Loads the given class or interface.
    *
@@ -149,8 +147,9 @@ class SplClassLoader
         $fileName = str_replace($this->_namespaceSeparator, DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
       }
       $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . $this->_fileExtension;
-
+ 
       require ($this->_includePath !== null ? $this->_includePath . DIRECTORY_SEPARATOR : '') . $fileName;
     }
   }
 }
+
